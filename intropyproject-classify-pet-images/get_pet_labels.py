@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/get_pet_labels.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                  
-# REVISED DATE: 
+# PROGRAMMER:  Wimonwan Sukprasong 
+# DATE CREATED:  September 20, 2025                                
+# REVISED DATE:  October 15, 2025
 # PURPOSE: Create the function get_pet_labels that creates the pet labels from 
 #          the image's filename. This function inputs: 
 #           - The Image Folder as image_dir within get_pet_labels function and 
@@ -40,6 +40,52 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
+    # Creates list of files in directory
+    in_files = listdir(image_dir)
+
+    # Creates empty dictionary for results (pet labels, etc.)
+    results_dic = dict()
+
+    # Determine number of items in dictionary
+    items_in_dic = len(results_dic)
+
+    # Adds new key-value pairs to dictionary ONLY when key doesn't already exist
+    for idx in range(0, len(in_files), 1):
+        # Skips file if starts with . (like .DS_Store of Mac OSX) because it 
+        # isn't an pet image file
+        if in_files[idx][0] != ".":
+            
+            # Sets pet_image variable to a filename 
+            pet_image = in_files[idx]
+            
+            # Sets string to lower case letters
+            low_pet_image = pet_image.lower()
+            
+            # Splits lower case string by _ to break into words 
+            word_list_pet_image = low_pet_image.split("_")
+            
+            # Create pet_name starting as empty string
+            pet_name = ""
+            
+            # Loops to check if word in pet name is only
+            # alphabetic characters - if true append word
+            # to pet_name separated by trailing space 
+            for word in word_list_pet_image:
+                if word.isalpha():
+                    pet_name += word + " "
+            
+            # Strip off starting/trailing whitespace characters 
+            pet_name = pet_name.strip()
+            
+            # If filename doesn't already exist in dictionary add it and its
+            # pet label - otherwise print an error message because indicates 
+            # duplicate files (filenames)
+            if pet_image not in results_dic:
+                results_dic[pet_image] = [pet_name]
+            else:
+                print("** Warning: Duplicate files exist in directory:", 
+                      pet_image)
+
     # Replace None with the results_dic dictionary that you created with this
     # function
-    return None
+    return results_dic
