@@ -1,0 +1,67 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                      dog04.jpg  label:                           
+ 2 key:                      dog03.jpg  label:                           
+ 3 key:                      dog06.jpg  label:                           
+ 4 key:                      dog02.jpg  label:                           
+ 5 key:                      dog01.jpg  label:                           
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                      dog04.jpg  label:                           
+ 2 key:                      dog03.jpg  label:                           
+ 3 key:                      dog06.jpg  label:                           
+ 4 key:                      dog02.jpg  label:                           
+ 5 key:                      dog01.jpg  label:                           
+
+     MATCH:
+
+                     dog04.jpg: 
+Real:                              Classifier: hog, pig, grunter, squealer, sus scrofa
+
+                     dog03.jpg: 
+Real:                              Classifier:                 siberian husky
+
+                     dog06.jpg: 
+Real:                              Classifier:                        basenji
+
+                     dog02.jpg: 
+Real:                              Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                     dog01.jpg: 
+Real:                              Classifier:                      chihuahua
+
+ NOT A MATCH:
+
+# Total Images 5 # Matches: 5 # NOT Matches: 0
+
+     MATCH:
+
+                     dog04.jpg: 
+Real:                              Classifier: hog, pig, grunter, squealer, sus scrofa  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                     dog03.jpg: 
+Real:                              Classifier:                 siberian husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                     dog06.jpg: 
+Real:                              Classifier:                        basenji  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                     dog02.jpg: 
+Real:                              Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                     dog01.jpg: 
+Real:                              Classifier:                      chihuahua  
+PetLabelDog: 0  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+# Total Images 5 # Matches: 5 # NOT Matches: 0
