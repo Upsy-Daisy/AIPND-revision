@@ -36,6 +36,7 @@ sh run_models_batch.sh
 python check_images.py --arch alexnet
 ```
 Results
+
 ![1760796685083](https://github.com/user-attachments/assets/3ddffaa8-998a-4896-84cd-0458d0705874)
 
 ![1760796908280](https://github.com/user-attachments/assets/d633d33c-71d4-4062-afde-87c23bf0d449)
