@@ -20,6 +20,9 @@ Uses pre-trained CNN models (AlexNet, VGG, and ResNet) to classify dog images an
 
 **How to Run**
 ```bash
+# Run all models at once
+sh run_models_batch.sh
+
 # Run with AlexNet model
 python check_images.py --arch alexnet
 
@@ -28,14 +31,10 @@ python check_images.py --arch vgg
 
 # Run with ResNet model
 python check_images.py --arch resnet
-
-# Run all models at once
-sh run_models_batch.sh
-
-# Run with AlexNet model
-python check_images.py --arch alexnet
 ```
 Results
+
+![1760795035671](https://github.com/user-attachments/assets/79cd5f8e-8c57-4883-876b-e4141cf88644)
 
 ![1760796685083](https://github.com/user-attachments/assets/3ddffaa8-998a-4896-84cd-0458d0705874)
 
@@ -44,5 +43,3 @@ Results
 ![1760796818631](https://github.com/user-attachments/assets/1f6d8e74-7d6b-4e58-a711-644bc8a89493)
 
 **Conclusion: VGG provides the best overall performance for this classification task.**
-
-![1760795035671](https://github.com/user-attachments/assets/79cd5f8e-8c57-4883-876b-e4141cf88644)
